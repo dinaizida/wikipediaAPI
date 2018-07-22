@@ -19,4 +19,4 @@ An interactive web browser (mobile responsive) application that using the Wikipe
 
 HTML, CSS, jQuery, JavaScript, AJAX, Wikipedia API, Materialize, Bootstrap, Affinity Photo.
 
-![Screen Shot](app/public/assets/images/app.png)
+![Screen Shot](app/assets/images/app.png)
