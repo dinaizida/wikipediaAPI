@@ -19,4 +19,5 @@ An interactive web browser (mobile responsive) application that using the Wikipe
 
 HTML, CSS, jQuery, JavaScript, AJAX, Wikipedia API, Materialize, Bootstrap, Affinity Photo.
 
-![Screen Shot]https://github.com/dinaizida/wikipediaAPI/blob/master/assets/images/app.png)
+![Screen Shot](https://github.com/dinaizida/wikipediaAPI/blob/master/assets/images/app.png)
+
