@@ -10,7 +10,6 @@ header {
     background-size: 100% 100%;
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, .14), 0 7px 5px -6px rgba(0, 0, 0, .2), 0 5px 9px 0 rgba(0, 0, 0, .12);
 }
-
 body {
     line-height: 150%;
     background-color: white;
@@ -26,45 +25,35 @@ body {
     min-height: 100vh;
     text-align: center;
 }
-
 #buttons-row {
     margin: 10px auto;
     display: flex;
     justify-content: center;
 }
-
 h1 {
     text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }
-
 #names-view {
     min-width: 100%;
     height: auto;
     padding: 10px;
     margin: 10px auto;
-}
-/* tr{
-    
-
-    
-} */
-.fn{
-    visibility: hidden;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .14), 0 5px 3px -4px rgba(0, 0, 0, .2), 0 3px 7px 0 rgba(0, 0, 0, .12);
+    border: solid 1px #009bdd;
+    cursor: pointer;
+    background-color:whitesmoke;
 }
 .container-flex {
     margin: 10 px auto;
     margin-bottom: 200px;
 }
-
 #name-input {
     background-color: #009bdd;
     opacity: 0.5;
 }
-
 button.name-btn {
     margin: 5px 10px;
 }
-
 #wrapper {
     padding-top: 10px;
     padding-bottom: 50px;
@@ -73,50 +62,16 @@ button.name-btn {
     margin: 20px auto;
 }
 
-#gifs-view {
-    display: flex;
-    flex-wrap: wrap;
-    margin: auto;
-    padding-top: 15px;
-    padding-block-end: 20px;
-    color: #009bdd;
-}
-
-.imgPosition {
-    width: 50%;
-    height: auto;
-    margin: 10px auto;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .14), 0 5px 3px -4px rgba(0, 0, 0, .2), 0 3px 7px 0 rgba(0, 0, 0, .12);
-    border: solid 1px gray;
-    cursor: pointer;
-}
-
-.poster {
+.information {
     margin: 10px auto;
     padding: 5px;
     font-size: 1em;
     color: #0077aa;
 }
 
-.posterImage {
-    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, .14), 0 9px 7px -7px rgba(0, 0, 0, .2), 0 7px 11px 0 rgba(0, 0, 0, .12);
-}
-
-h3 {
-    color: #ff4725;
-    text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1), 10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
-    padding: 5px;
-}
-
 p {
     font-size: 0.8em;
 }
-
-h4 {
-    color: #ff4725;
-    font-size: 0.6em;
-}
-
 
 /*footer*/
 
@@ -158,16 +113,10 @@ a:visited {
         #wrapper {
             padding-bottom: 5px;
         }
-        .imgPosition {
-            width: 50%;
-            height: auto;
-        }
+       
         h1 {
             text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
             font-size: 1.5em;
         }
     }
-    /*  BOX shadow from Bootstrap buttons
-0 2px 2px 0 rgba(0,0,0,.14),
- 0 3px 1px -2px rgba(0,0,0,.2), 
- 0 1px 5px 0 rgba(0,0,0,.12); */
+   

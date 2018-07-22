@@ -1,22 +1,21 @@
+//hide non input fields on window load
+window.onload = function(){
+	
+	$("#names-view").hide();
+}
+
 $("document").ready(function() {
-
+   // array with some names from Eiffel Tower listed in Wikipedia
     var names = [
-        "Pierre Berthier", "Marc Seguin", "Michel Chasles", "Joseph-Louis Lagrange", "Jean-Victor Poncelet"
+        "Antoine Lavoisier", "Henri Tresca", "Jean-Victor Poncelet", "Joseph-Louis Lagrange", "Georges Cuvier"
     ];
-    //**********************local storage to render new buttons */
-
+    //**********************using local storage to render new buttons */
     var tasksButtons = JSON.parse(localStorage.getItem("tasksButtons")) || [];
-
     renderButtonsP();
-
     function renderTasksButtons() {
-
         $("#name-view-add").empty();
-
         for (var i = 0; i < tasksButtons.length; i++) {
-
-            var toDoTask = tasksButtons[i];
-
+           // var toDoTask = tasksButtons[i];
             var btn = $('<button class="btn btn-raised btn-info name-btn">');
             btn.attr("data-name", tasksButtons[i]);
             btn.text(tasksButtons[i]);
@@ -26,7 +25,7 @@ $("document").ready(function() {
 
     function displaynameInfo() {
         var name = $(this).attr("data-name");
-        var queryURL = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + name + "&callback=?";
+        //var queryURL = "https://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + name + "&callback=?";
         // Creating an AJAX call for the specific name button being clicked
         $.ajax({
             type: "GET",
@@ -44,14 +43,11 @@ $("document").ready(function() {
                 //remove references( The <sup> tag that defines superscript text. )
                 html.find('sup').remove();
   
-                // remove cite error due to some of the articles has it
+                // remove cite error due to some of the articles has it on the bottom
                 html.find('.mw-ext-cite-error').remove();
-        
-               // img source not uploading from wikipedia
-               html.find('img').remove();
-               $('#names-view').html($(html).find('tr'));
-               $('#names-info').html($(html).find('p'));
-  
+              
+               $("#names-view").fadeIn(1000);
+               $('#names-view').html($(html).find('p'));
             },
             error: function(errorMessage) {}
         });
@@ -106,7 +102,7 @@ $("document").ready(function() {
         renderTasksButtons();
     });
 
-    // display posters and gifs
+    // display engineer information 
     $(document).on("click", ".name-btn", displaynameInfo);
 
 
