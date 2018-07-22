@@ -1,21 +1,22 @@
 //hide non input fields on window load
-window.onload = function(){
-	
-	$("#names-view").hide();
+window.onload = function() {
+
+    $("#names-view").hide();
 }
 
 $("document").ready(function() {
-   // array with some names from Eiffel Tower listed in Wikipedia
+    // array with some names from Eiffel Tower listed in Wikipedia
     var names = [
         "Antoine Lavoisier", "Henri Tresca", "Jean-Victor Poncelet", "Joseph-Louis Lagrange", "Georges Cuvier"
     ];
     //**********************using local storage to render new buttons */
     var tasksButtons = JSON.parse(localStorage.getItem("tasksButtons")) || [];
     renderButtonsP();
+
     function renderTasksButtons() {
         $("#name-view-add").empty();
         for (var i = 0; i < tasksButtons.length; i++) {
-           // var toDoTask = tasksButtons[i];
+            // var toDoTask = tasksButtons[i];
             var btn = $('<button class="btn btn-raised btn-info name-btn">');
             btn.attr("data-name", tasksButtons[i]);
             btn.text(tasksButtons[i]);
@@ -36,22 +37,24 @@ $("document").ready(function() {
                 var output = data.parse.text["*"];
                 var html = $('<div></div>').html(output);
                 console.log("information : " + output);
-  
+
                 // remove links due to they are not wokring (used jQuery method)
-                html.find('a').each(function() { $(this).replaceWith($(this).html()); });
-  
+                html.find('a').each(function() {
+                    $(this).replaceWith($(this).html());
+                });
+
                 //remove references( The <sup> tag that defines superscript text. )
                 html.find('sup').remove();
-  
+
                 // remove cite error due to some of the articles has it on the bottom
                 html.find('.mw-ext-cite-error').remove();
-              
-               $("#names-view").fadeIn(1000);
-               $('#names-view').html($(html).find('p'));
+
+                $("#names-view").fadeIn(1000);
+                $('#names-view').html($(html).find('p'));
             },
             error: function(errorMessage) {}
         });
-  
+
     };
 
     // Function for displaying posters data
@@ -104,6 +107,5 @@ $("document").ready(function() {
 
     // display engineer information 
     $(document).on("click", ".name-btn", displaynameInfo);
-
 
 });

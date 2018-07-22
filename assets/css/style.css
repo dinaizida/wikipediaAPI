@@ -10,6 +10,7 @@ header {
     background-size: 100% 100%;
     box-shadow: 0 6px 6px 0 rgba(0, 0, 0, .14), 0 7px 5px -6px rgba(0, 0, 0, .2), 0 5px 9px 0 rgba(0, 0, 0, .12);
 }
+
 body {
     line-height: 150%;
     background-color: white;
@@ -25,14 +26,17 @@ body {
     min-height: 100vh;
     text-align: center;
 }
+
 #buttons-row {
     margin: 10px auto;
     display: flex;
     justify-content: center;
 }
+
 h1 {
     text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }
+
 #names-view {
     min-width: 100%;
     height: auto;
@@ -41,19 +45,23 @@ h1 {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .14), 0 5px 3px -4px rgba(0, 0, 0, .2), 0 3px 7px 0 rgba(0, 0, 0, .12);
     border: solid 1px #009bdd;
     cursor: pointer;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
 }
+
 .container-flex {
-    margin: 10 px auto;
+    margin: 10px auto;
     margin-bottom: 200px;
 }
+
 #name-input {
     background-color: #009bdd;
     opacity: 0.5;
 }
+
 button.name-btn {
     margin: 5px 10px;
 }
+
 #wrapper {
     padding-top: 10px;
     padding-bottom: 50px;
@@ -72,6 +80,7 @@ button.name-btn {
 p {
     font-size: 0.8em;
 }
+
 
 /*footer*/
 
@@ -103,20 +112,20 @@ a:visited {
         padding-top: 10px;
         padding-bottom: 150px;
     }
-    @media (max-width: 375px) {
-        body {
-            font-size: 0.8em;
-        }
-        #footernav {
-            display: none;
-        }
-        #wrapper {
-            padding-bottom: 5px;
-        }
-       
-        h1 {
-            text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
-            font-size: 1.5em;
-        }
+}
+@media (max-width: 375px) {
+    body {
+        font-size: 0.8em;
     }
+    #footernav {
+        display: none;
+    }
+    #wrapper {
+        padding-bottom: 5px;
+    }
+    h1 {
+        text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+        font-size: 1.5em;
+    }
+}
    
