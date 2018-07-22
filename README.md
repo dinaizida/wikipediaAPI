@@ -3,7 +3,7 @@
 
 ## wikipedia
 
- Deployed app [here](https://dinaizida.github.io/wikipedia/).
+ Deployed app [here](https://dinaizida.github.io/wikipediaAPI).
 
 # Project Description:
 
